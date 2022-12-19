@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Hi, @User</h1>
+
+<div>
+  <% if @mileages.present? %>
+    <p>
+      The current mileage is: <%= @mileages.last.value %>
+    </p>
+  <% end %>
+</div>
+
+<div id="mileages">
+  <% @mileages.each do |mileage| %>
+    <%= render mileage %>
+    <p>
+      <%= link_to "Show this mileage", mileage %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New mileage", new_mileage_path %>
