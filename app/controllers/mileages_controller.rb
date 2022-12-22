@@ -12,8 +12,8 @@ class MileagesController < ApplicationController
   
   # GET /mileages/new
   def new
-    @current_mileage = Mileage.all.last.value
     @mileage = Mileage.new
+    # @previous_mileage = Mileage.find(params[:value])
   end
 
   # GET /mileages/1/edit
@@ -23,7 +23,7 @@ class MileagesController < ApplicationController
   # POST /mileages or /mileages.json
   def create
     @mileage = Mileage.new(mileage_params)
-
+    
     respond_to do |format|
       if @mileage.save 
         format.html { redirect_to mileage_url(@mileage), notice: "Mileage was successfully created." }

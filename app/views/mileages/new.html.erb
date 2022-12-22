@@ -1,12 +1,11 @@
 <h1>Hello, @user</h1>
 
-<% if @current_mileage.present? %> 
-  <div>
-    <p>
-       Please enter the new Mileage. The current Mileage is: <%= @current_mileage %> 
-    </p>
-  </div>
-<% end %> 
+<div>
+  <p>
+      Please enter the new Mileage. The current Mileage is: <%= @previous_mileage %> 
+  </p>
+</div>
+
 
 <%= render "form", mileage: @mileage %>
 
