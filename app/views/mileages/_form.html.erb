@@ -1,0 +1,29 @@
+<%= form_with(model: mileage) do |form| %>
+  <% if mileage.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(mileage.errors.count, "error") %> prohibited this mileage from being saved:</h2>
+
+      <ul>
+        <% mileage.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :start, style: "display: block" %>
+    <%= form.number_field :start, :value => (@current_mileage), readonly: true %>
+  <%=
+  %>
+  </div>
+
+  <div>
+    <%= form.label :end, style: "display: block" %>
+    <%= form.number_field :end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
