@@ -4,7 +4,7 @@ class MileagesController < ApplicationController
 
   # GET /mileages or /mileages.json
   def index
-    @mileages = Mileage.all
+    @mileages = Mileage.all.page params[:page]
   end
 
   # GET /mileages/1 or /mileages/1.json

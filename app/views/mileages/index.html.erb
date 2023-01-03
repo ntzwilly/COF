@@ -2,6 +2,7 @@
 
 <h1>Mileages</h1>
 
+
 <div id="mileages">
   <% @mileages.each do |mileage| %>
     <%= render mileage %>
@@ -10,5 +11,7 @@
     </p>
   <% end %>
 </div>
+
+<%= paginate @mileages, window: 2 %><br/>
 
 <%= link_to "New mileage", new_mileage_path %>
