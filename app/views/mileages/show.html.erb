@@ -2,9 +2,8 @@
 
 <%= render @mileage %>
 
-<div>
-  <%= link_to "Edit this mileage", edit_mileage_path(@mileage) %> |
-  <%= link_to "Back to mileages", mileages_path %>
-
-  <%= button_to "Destroy this mileage", @mileage, method: :delete %>
+<div class="flex justify-center mt-3">
+  <%= link_to "Edit", edit_mileage_path(@mileage) %> <span class="mx-2">|</span>
+  <%= link_to "Back", mileages_path %> <span class="mx-2">|</span>
+  <%= button_to "Destroy", @mileage, method: :delete, class:"hover:text-rose-700" %>
 </div>

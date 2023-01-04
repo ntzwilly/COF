@@ -1,17 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Mileages</h1>
+<div class="flex flex-col items-center h-screen pt-16">
+  <h1 class="text-3xl mb-5">Mileages</h1>
 
 
-<div id="mileages">
-  <% @mileages.each do |mileage| %>
-    <%= render mileage %>
-    <p>
-      <%= link_to "Show this mileage", mileage %>
-    </p>
-  <% end %>
+  <ul id="mileages">
+    <% @mileages.each do |mileage| %>
+      <li>
+        <%= render mileage %>
+      </li>
+      <p class="text-right text-xs mt-2 mb-3 mr-5 text-cyan-600 hover:text-slate-500">
+        <%= link_to "Show this mileage", mileage %>
+      </p>
+      <%# <hr class="m-3"/> %>
+    <% end %>
+  </ul>
+
+  <%= paginate @mileages, window: 2 %><br/>
+
+  <%= link_to "New mileage", new_mileage_path %>
 </div>
-
-<%= paginate @mileages, window: 2 %><br/>
-
-<%= link_to "New mileage", new_mileage_path %>

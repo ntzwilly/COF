@@ -1,12 +1,9 @@
-<div id="<%= dom_id mileage %>">
-  <p>
-    <strong>Start:</strong>
-    <%= mileage.start %>
-  </p>
-
-  <p>
-    <strong>End:</strong>
-    <%= mileage.end %>
-  </p>
-
+<div class="flex items-center border border-gray rounded-md h-20 gap-9 px-4 shadow-md" id="<%= dom_id mileage %>">
+  <div class="border p-2 rounded-full">
+   <p class="text-xs">Username</p>
+  </div>
+  <div>
+    <p class="text-sm mb-2">Old Mileage <span class="ml-2"> : <%= mileage.start %></span></p>
+    <p class="text-sm">New Mileage : <%= mileage.end %></p>
+  </div>
 </div>
