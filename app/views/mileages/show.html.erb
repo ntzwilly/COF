@@ -1,9 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<div class="h-screen">
+  <p style="color: green"><%= notice %></p>
 
-<%= render @mileage %>
+  <%= render @mileage %>
 
-<div class="flex justify-center mt-3">
-  <%= link_to "Edit", edit_mileage_path(@mileage) %> <span class="mx-2">|</span>
-  <%= link_to "Back", mileages_path %> <span class="mx-2">|</span>
-  <%= button_to "Destroy", @mileage, method: :delete, class:"hover:text-rose-700" %>
+  <div class="flex justify-center mt-3">
+    <%= link_to "Edit", edit_mileage_path(@mileage) %> <span class="mx-2">|</span>
+    <%= link_to "Back", mileages_path %> <span class="mx-2">|</span>
+    <%= button_to "Destroy", @mileage, method: :delete, class:"hover:text-rose-700" %>
+  </div>
 </div>
