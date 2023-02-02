@@ -24,14 +24,13 @@ class MileagesController < ApplicationController
   # POST /mileages or /mileages.json
   def create
     @mileage = Mileage.new(mileage_params)
-    binding.break
 
     respond_to do |format|
       if @mileage.save
         format.html { redirect_to mileage_url(@mileage), notice: "Mileage was successfully created." }
         format.json { render :show, status: :created, location: @mileage }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { render :new, status: :unprocessable_entity, notice: "Something was wrong" }
         format.json { render json: @mileage.errors, status: :unprocessable_entity }
       end
     end
