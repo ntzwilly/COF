@@ -15,7 +15,7 @@
     <% end %>
   </ul>
 
-  <%= paginate @mileages, window: 2 %><br/>
+  <%= link_to "New mileage", new_mileage_path, class: "mb-5" %>
 
-  <%= link_to "New mileage", new_mileage_path %>
+  <%= paginate @mileages, window: 2, class:"fixed" %><br/>
 </div>
