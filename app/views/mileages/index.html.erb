@@ -1,8 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="flex flex-col items-center h-screen pt-16">
-  <h1 class="text-3xl mb-5">Mileages</h1>
+<div class="flex flex-col items-center h-screen pt-14">
 
+  <h1 class="text-3xl mb-5">Mileages</h1>
 
   <ul id="mileages">
     <% @mileages.each do |mileage| %>
@@ -15,7 +15,9 @@
     <% end %>
   </ul>
 
-  <%= link_to "New mileage", new_mileage_path, class: "mb-5" %>
+  <%= link_to "New mileage", new_mileage_path, class:"new-mileage" %>
 
-  <%= paginate @mileages, window: 2, class:"fixed" %><br/>
+  <%= paginate @mileages, left: 1, right: 3 %><br/>
 </div>
+
+
