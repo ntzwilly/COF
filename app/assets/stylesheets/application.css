@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+.new-mileage {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  border: 1px solid gray;
+  border-radius: 50px;
+  padding: 5px 12px;
+}
+
+.new-mileage:hover {
+  background-color: #3a97b6;
+  text-decoration: aliceblue;
+  color: white;
+}
+ 
