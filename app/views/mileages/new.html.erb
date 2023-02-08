@@ -1,8 +1,9 @@
-<div class="flex flex-col items-center mt-16 h-screen">
-  <h1 class="text-3xl mb-9">Please enter the new mileage:</h1>
-   <%= render "form", mileage: @mileage %>
-  <br>
+<div class="flex flex-col mt-6 items-center mileage">
+  <div>
+    <h4 class="text-3xl mb-9">Update mileage:</h4>
+    <%= render "form", mileage: @mileage %>
+  </div>
   <div class="mt-18">
-    <%= link_to "Back to mileages", mileages_path, class: "new-mileage" %>
+    <%= link_to "Back to mileages", mileages_path, class: "back" %>
   </div>
 </div>
