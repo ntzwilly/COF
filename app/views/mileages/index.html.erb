@@ -21,8 +21,9 @@
       </p>
     <% end %>
   </ul>
-
+<% if user_signed_in? %>
   <%= link_to "New mileage", new_mileage_path, class:"new-mileage" %>
+<% end %>
 
   <%= paginate @mileages, window: 2 %><br/>
 </div>
