@@ -1,6 +1,6 @@
 <div class="flex items-center border border-gray rounded-md h-20 gap-9 px-4 shadow-md" id="<%= dom_id mileage %>">
   <div class="border p-2 rounded-full">
-   <p class="text-xs">Username</p>
+   <p class="text-xs"><%= mileage.user.email.split('@')[0] %></p>
   </div>
   <div>
     <p class="text-sm mb-2">Old Mileage <span class="ml-2"> : <%= mileage.start %></span></p>
