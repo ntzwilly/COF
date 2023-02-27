@@ -24,6 +24,7 @@ class MileagesController < ApplicationController
   # POST /mileages or /mileages.json
   def create
     @mileage = Mileage.new(mileage_params)
+    @mileage.user = User.first
 
     respond_to do |format|
       if @mileage.save
