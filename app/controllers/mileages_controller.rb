@@ -1,6 +1,7 @@
 class MileagesController < ApplicationController
   before_action :set_mileage, only: %i[ show edit update destroy ]
   before_action :set_current_mileage, only: [ :new, :create ]
+  # before_action :authenticate_user!
 
   # GET /mileages or /mileages.json
   def index
@@ -24,7 +25,7 @@ class MileagesController < ApplicationController
   # POST /mileages or /mileages.json
   def create
     @mileage = Mileage.new(mileage_params)
-    @mileage.user = User.first
+    @mileage.user = current_user
 
     respond_to do |format|
       if @mileage.save
